@@ -185,26 +185,6 @@ namespace Producer
 
                     channel.ExchangeDeclare(exchangeName, ExchangeType.Headers, durable: true);
 
-                    //var oddQueueName = string.Format("{0}_h_{1}", QueueName, headerOdd);
-
-                    //Log("Criando/Conectando a Fila '{0}'", oddQueueName);
-
-                    //channel.QueueDeclare(oddQueueName, durable: true, exclusive: false, autoDelete: false, arguments: null);
-
-                    //headers.Add("type", headerOdd);
-
-                    //channel.QueueBind(queue: oddQueueName, exchange: exchangeName, routingKey: "", arguments: headers);
-
-                    //var evenQueueName = string.Format("{0}_h_{1}", QueueName, headerEven);
-
-                    //Log("Criando/Conectando a Fila '{0}'", evenQueueName);
-
-                    //channel.QueueDeclare(evenQueueName, durable: true, exclusive: false, autoDelete: false, arguments: null);
-
-                    //headers["type"] = headerEven;
-
-                    //channel.QueueBind(queue: evenQueueName, exchange: exchangeName, routingKey: "", arguments: headers);
-
                     var properties = channel.CreateBasicProperties();
                     properties.Persistent = true;
                     properties.Headers = new Dictionary<string, object>();

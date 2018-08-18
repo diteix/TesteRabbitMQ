@@ -141,10 +141,6 @@ namespace Consumer
                 {
                     var exchangeName = ExchangeName + "_topic";
 
-                    //Log("Criando/Conectando ao Exchange '{0}'", exchangeName);
-
-                    //channel.ExchangeDeclare(exchangeName, ExchangeType.Topic, durable: true);
-
                     var queueName = string.Format("{0}_{1}", QueueName, topic);
 
                     Log("Criando/Conectando a Fila '{0}'", queueName);
